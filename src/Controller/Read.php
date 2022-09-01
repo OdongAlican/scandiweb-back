@@ -37,6 +37,6 @@ namespace App;
             } else {
                 echo json_encode(array('Message' => 'No Products'));
             }
-        }      
+        }
 
     }
