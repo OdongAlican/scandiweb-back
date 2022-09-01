@@ -25,6 +25,7 @@ $router->post('/products', function(){
 });
 
 $router->addNotFoundHandler(function(){
+    header('HTTP/1.1 404 Not Found', true, 404);
     echo json_encode(array('message' => "Path Not Found"));
 });
 
