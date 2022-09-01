@@ -1,0 +1,17 @@
+{
+    "name": "odong/test",
+    "description": "scandiweb app",
+    "type": "project",
+    "authors": [
+        {
+            "name": "OdongAlican",
+            "email": "sandieo.2020@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": ["src/", "src/Config", "src/Controller", "src/Models"]
+        }
+    }
+}
