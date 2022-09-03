@@ -37,7 +37,7 @@ namespace App;
                     header('HTTP/1.1 500 Internal Server Error', true, 500);
                     echo json_encode(array('Message' => 'Post Not Created'));
                 }
-            }else{
+            } else{
                 header('HTTP/1.1 400 Bad Request', true, 400);
                 echo json_encode($data['errArray']);
             }

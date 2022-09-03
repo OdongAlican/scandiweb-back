@@ -1,6 +1,8 @@
 <?php
 namespace App;
 
+use App\Database;
+
 class Helper {
 
     function validate($product){       
@@ -17,6 +19,12 @@ class Helper {
             $output['errArray'] = $emptyValues;
         }
         return $output;
+    }
+
+    function dbConnection(){
+        $database = new Database();
+        $db = $database->connect();
+        return $db;
     }
 
 }

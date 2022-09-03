@@ -7,6 +7,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 use App\Router;
 use App\Read;
 use App\Create;
+use App\Helper;
 
 $router = new Router();
 
@@ -15,7 +16,9 @@ $router->get('/', function(){
 });
 
 $router->get('/products', function(){
-    $results = new Read();
+    $dbInstance = new Helper();
+    $dbConnect = $dbInstance->dbConnection();
+    $results = new Read($dbConnect);
     echo $results->dataArray();
 });
 
