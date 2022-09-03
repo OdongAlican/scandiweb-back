@@ -7,30 +7,26 @@ namespace App;
     header('Access-Control-Allow-Headers: Access-Control-Allow-Headers, Content-Type, 
     Access-Control-Allow-Methods, Authorization, X-Requested-with');
 
-    use App\Database;
     use App\Product;
     use App\Helper;
 
-    class Create {
+    class Create extends Product {
+
         function addProduct(){
-
-            $database = new Database();
-            $db = $database->connect();
         
-            $product = new Product($db);
             $formData = json_decode(file_get_contents("php://input"));
-
+            
             $formValidator = new Helper();
             $data = $formValidator->validate($formData);
-
+            
             if($data['submit']) {
                 
-                $product->name = $data->name;
-                $product->type = $data->type;
-                $product->price = $data->price;
-                $product->capacity = $data->capacity;
+                $this->name = $data['product']->name;
+                $this->type = $data['product']->type;
+                $this->price = $data['product']->price;
+                $this->capacity = $data['product']->capacity;
             
-                if($product->create()){
+                if($this->create()){
                     header('HTTP/1.1 201 Created', true, 201);
                     echo json_encode(array('Message' => 'Post Created'));
                 } else {                    

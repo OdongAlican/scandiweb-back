@@ -23,7 +23,9 @@ $router->get('/products', function(){
 });
 
 $router->post('/products', function(){
-    $result = new Create();
+    $dbInstance = new Helper();
+    $dbConnect = $dbInstance->dbConnection();
+    $result = new Create($dbConnect);
     echo $result->addProduct();
 });
 
