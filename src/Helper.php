@@ -13,7 +13,7 @@ class Helper {
         $output = array('product' => $product, 'errArray' => $this->emptyValues, 'submit' => true );
 
         foreach( $product as $key => $value ) {
-            if(strlen($value) < 1) { array_push($this->emptyValues, $key . " is missing!"); }
+            if(strlen($value) < 1) { array_push($this->emptyValues, $key . " is required!"); }
         }
 
         if(count($this->emptyValues) > 0) {

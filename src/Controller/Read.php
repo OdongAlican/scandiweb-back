@@ -29,7 +29,7 @@ namespace App;
                 }
                 echo json_encode($this->products);
                 } else {
-                    echo json_encode(array('Message' => 'No Products'));
+                    echo json_encode(array());
                 }
         }
 
