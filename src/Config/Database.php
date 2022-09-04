@@ -28,7 +28,7 @@ class Database {
 
     private function createDBTable(){
 
-        $link = mysqli_connect($this->host, $this->user_name, $this->password, "api");
+        $link = mysqli_connect($this->host, $this->user_name, $this->password, $this->db_name);
         
         if($link === false){
             die("ERROR: Could not connect. " . mysqli_connect_error());
