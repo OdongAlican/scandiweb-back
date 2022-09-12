@@ -9,6 +9,8 @@ use App\Read;
 use App\Create;
 use App\Helper;
 
+$configureRoutes = new Helper();
+$configureRoutes->setHeaders();
 $router = new Router();
 
 $router->get('/', function(){

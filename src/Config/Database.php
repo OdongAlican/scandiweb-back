@@ -37,9 +37,10 @@ class Database {
         $sql = "CREATE TABLE products (
             id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
             name VARCHAR(30) NOT NULL,
+            sku VARCHAR(30) NOT NULL,
             type VARCHAR(30) NOT NULL,
             price VARCHAR(30) NOT NULL,
-            capacity VARCHAR(50) NOT NULL
+            data VARCHAR(100) NOT NULL
         )";
 
         if ($result = mysqli_query("SHOW TABLES LIKE '".$this->table."'")) {

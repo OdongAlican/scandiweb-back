@@ -1,9 +1,5 @@
 <?php
-
 namespace App;
-
-    header('Access-Control-Allow-Origin: *');
-    header('Content-Type: application/json');
 
     use App\Product;
     use PDO;
@@ -24,7 +20,8 @@ namespace App;
                         'name' => $outPutaData['name'],
                         'type' => $outPutaData['type'],
                         'price' => $outPutaData['price'],
-                        'capacity' => $outPutaData['capacity'],
+                        'data' => $outPutaData['data'],
+                        'sku' => $outPutaData['sku'],
                     ));
                 }
                 echo json_encode($this->products);
