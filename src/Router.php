@@ -9,6 +9,7 @@ class Router {
     private array $handlers;
     private const METHOD_POST = 'POST';
     private const METHOD_GET = 'GET';
+    private const METHOD_DELETE = 'DELETE';
     private $notFoundHnadler;
 
     public function get(string $path, $handler): void {
@@ -17,6 +18,10 @@ class Router {
 
     public function post(string $path, $handler): void {
         $this->addHandler(self::METHOD_POST, $path, $handler);
+    }
+
+    public function delete(string $path, $handler): void {
+        $this->addHandler(self::METHOD_DELETE, $path, $handler);
     }
 
     public function addNotFoundHandler($handler): void {

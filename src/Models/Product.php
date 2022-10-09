@@ -25,6 +25,14 @@ class Product {
         return $stmt;
     }
 
+    public function delete($listofIdsToDelete) {
+        $ids = implode(",", $listofIdsToDelete);
+        $query = "DELETE FROM `products` WHERE id IN ($ids)";     
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+        return $stmt;
+    }
+
     public function create() {
         $query = 'INSERT INTO products SET 
         type = :type,

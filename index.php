@@ -7,6 +7,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 use App\Router;
 use App\Read;
 use App\Create;
+use App\Delete;
 use App\Helper;
 
 $configureRoutes = new Helper();
@@ -29,6 +30,13 @@ $router->post('/products', function(){
     $dbConnect = $dbInstance->dbConnection();
     $result = new Create($dbConnect);
     echo $result->addProduct();
+});
+
+$router->delete('/products', function(){
+    $dbInstance = new Helper();
+    $dbConnect = $dbInstance->dbConnection();
+    $result = new Delete($dbConnect);
+    echo $result->deleteProduct();
 });
 
 $router->addNotFoundHandler(function(){
