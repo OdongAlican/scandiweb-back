@@ -8,7 +8,7 @@ class Database {
     private $host = 'sql.freedb.tech';
     private $db_name = 'freedb_scandiweb-app';
     private $user_name = 'freedb_alican';
-    private $password = 'j8g22M!5#EdB#mD';
+    private $password = 'wAVfz8@HmD@uphB';
     private $table = 'products';
     private $conn;
 
