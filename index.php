@@ -15,24 +15,20 @@ $configureRoutes->setHeaders();
 $router = new Router();
 
 $router->get('/', function(){
-    echo 'Home Page';
-});
-
-$router->get('/products', function(){
     $dbInstance = new Helper();
     $dbConnect = $dbInstance->dbConnection();
     $results = new Read($dbConnect);
     echo $results->dataArray();
 });
 
-$router->post('/products', function(){
+$router->post('/', function(){
     $dbInstance = new Helper();
     $dbConnect = $dbInstance->dbConnection();
     $result = new Create($dbConnect);
     echo $result->addProduct();
 });
 
-$router->delete('/products', function(){
+$router->delete('/', function(){
     $dbInstance = new Helper();
     $dbConnect = $dbInstance->dbConnection();
     $result = new Delete($dbConnect);

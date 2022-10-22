@@ -5,10 +5,10 @@ use PDO;
 use PDOException;
 
 class Database {
-    private $host = 'localhost';
-    private $db_name = 'id19691239_scandiweb';
-    private $user_name = 'id19691239_root';
-    private $password = '\!BoizMA24vk4U_P';
+    private $host = 'sql.freedb.tech';
+    private $db_name = 'freedb_scandiweb-app';
+    private $user_name = 'freedb_alican';
+    private $password = 'j8g22M!5#EdB#mD';
     private $table = 'products';
     private $conn;
 

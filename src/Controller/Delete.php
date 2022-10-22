@@ -12,7 +12,8 @@ namespace App;
             var_dump(count($formData));
             if(count($formData) > 0) {
                 $this->result = $this->delete($formData);
-            }{
+                return;
+            }else{
                 echo json_encode(array('Message' => 'Please Select Elements To Delete'));
             }
             
