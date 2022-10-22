@@ -5,16 +5,16 @@ use PDO;
 use PDOException;
 
 class Database {
-    private $host = '127.0.0.1';
-    private $db_name = 'api';
-    private $user_name = 'root';
-    private $password = '123456';
+    private $host = 'localhost';
+    private $db_name = 'id19691239_scandiweb';
+    private $user_name = 'id19691239_root';
+    private $password = '\!BoizMA24vk4U_P';
     private $table = 'products';
     private $conn;
 
     public function connect(){
 
-        $this->createDBTable();
+        // $this->createDBTable();
 
         $this->conn = null;
         try{
