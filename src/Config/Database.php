@@ -5,10 +5,19 @@ use PDO;
 use PDOException;
 
 class Database {
+    /*
+    private $host = '127.0.0.1';
+    private $db_name = 'api';
+    private $user_name = 'root';
+    private $password = '123456';
+    private $table = 'products';
+    private $conn;
+    */
+
     private $host = 'sql.freedb.tech';
-    private $db_name = 'freedb_scandiweb-app';
-    private $user_name = 'freedb_amulla';
-    private $password = 'w63q8!x*6dh%Txj';
+    private $db_name = 'freedb_scandiweb-test';
+    private $user_name = 'freedb_odong';
+    private $password = '72PHFc6&HsMa$G4';
     private $table = 'products';
     private $conn;
 
