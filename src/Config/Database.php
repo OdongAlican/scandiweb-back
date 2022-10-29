@@ -37,7 +37,7 @@ class Database {
         $sql = "CREATE TABLE products (
             id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
             name VARCHAR(30) NOT NULL,
-            sku VARCHAR(30) NOT NULL,
+            sku VARCHAR(30) NOT NULL UNIQUE,
             type VARCHAR(30) NOT NULL,
             price VARCHAR(30) NOT NULL,
             data VARCHAR(100) NOT NULL
