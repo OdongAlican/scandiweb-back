@@ -15,9 +15,9 @@ class Database {
     */
 
     private $host = 'sql.freedb.tech';
-    private $db_name = 'freedb_scandiweb-test';
-    private $user_name = 'freedb_odong';
-    private $password = '72PHFc6&HsMa$G4';
+    private $db_name = 'freedb_scandiweb-alican';
+    private $user_name = 'freedb_canotech';
+    private $password = 'z&UaaVC6hGp&Z3X';
     private $table = 'products';
     private $conn;
 
